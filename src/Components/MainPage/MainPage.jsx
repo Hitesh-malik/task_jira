@@ -16,7 +16,6 @@ const MainPage = () => {
     const handleDrop = (e, targetStatus) => {
         const taskTitle = e.dataTransfer.getData("taskTitle");
 
-        // Remove task from its previous list
         let updatedTasks;
         if (task.includes(taskTitle)) {
             updatedTasks = task.filter(task => task !== taskTitle);
@@ -29,7 +28,6 @@ const MainPage = () => {
             setCompletedTask(updatedTasks);
         }
 
-        // Add task to the target list
         if (targetStatus === 0) setTask(prev => [...prev, taskTitle]);
         else if (targetStatus === 1) setWorkingTask(prev => [...prev, taskTitle]);
         else if (targetStatus === 2) setCompletedTask(prev => [...prev, taskTitle]);

@@ -8,8 +8,6 @@ const TaskVisible = ({ list, status, prevList = () => { }, CurrentList = () => {
 
   const shift = (status, information) => {
     console.log(status, information);
-
-    // Shift the task to the next status
     prevList((prev) => {
       return prev.filter(item => item !== information);
     });
