@@ -1,0 +1,18 @@
+.main-container {
+    padding: 20px;
+}
+
+.task-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.task-box {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
